@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap);
+@import url(https://fonts.google.com/specimen/Karla);
+
+$DarkViolet: hsl(256, 26%, 20%);
+$GrayishBlue: hsl(216, 30%, 68%);
+$VeryDarkViolethsl:hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$font:hsl(276,4.55%,56.86%);
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+
+button {
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    border: 1px solid hsl(0deg, 0%, 98%);
+    color: $VeryLightGray;
+    background-color: $VeryDarkViolethsl;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: small;
+    text-transform: uppercase;
+    &:hover {
+        color: hsl(256deg, 26%, 20%);
+        background-color: hsl(0deg, 0%, 98%);
+    }
+}
+
+header {
+    font-family: "DM Serif Display", serif;
+    nav {
+        background-color: hsl(0deg, 0%, 98%);
+        .list ul li a {
+            color: hsl(216deg, 30%, 68%);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            &:hover {
+                color: hsl(256deg, 26%, 20%);
+            }
+        }
+    }
+    .front {
+        color: hsl(0deg, 0%, 98%);
+        padding-bottom: 0px;
+        .dark{
+            background-color: hsl(256deg, 26%, 20%);
+          
+        }
+       
+    }
+}
+
+main {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+   
+    hr{
+        border-top: 1px solid $DarkViolet;
+    }
+    .flexCont{
+        h3{
+            color: $VeryDarkViolethsl;
+        }
+        .flex{
+            color: $font;
+        }
+    }
+    .bottom{
+        
+        background-color: $DarkViolet;
+        
+        color: $VeryLightGray;
+        
+    }
+}
+
+footer{
+    display: block;
+    background-color: $VeryLightGray;
+   .list{
+    color: $font;
+   }
+    
+    
+} 
+.attribution {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 376px) {
+    h1 {
+        font-size: 68px;
+        margin-bottom: 30px;
+        line-height: 60px;
+        font-weight: 200;
+        font-family: "DM Serif Display", serif;
+    }
+    
+    
+    hr {
+        border-top: 1px solid hsl(0deg, 0%, 98%);
+        width: 25%;
+        margin-bottom: 50px;
+    }
+    .container{
+        padding: 0px 120px;
+    }
+    
+    header{
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 120px;
+            .list ul {
+                list-style: none;
+                li{
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .front {
+            position: relative;
+            h1 {
+                font-size: 68px;
+                margin-bottom: 30px;
+                line-height: 60px;
+                font-weight: 200;
+            }
+         
+            p{
+                margin-bottom: 50px;
+            }
+            .dark{
+                padding: 100px 120px;
+                .jumbot {
+                    width: 48%;
+                }
+            }
+            #desk {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            #mobile {
+                display: none;
+            }
+            #leftDesk {
+                position: relative;
+                bottom: 200px;
+            }
+            #leftMob {
+                display: none;
+            }
+            
+            .mob {
+                top: 80px;
+                display: block;
+                position: absolute;
+                right: 120px;
+            }
+        }
+    }
+    main{
+        margin-top: -120px;
+        margin-bottom: 100px;
+        .bottom{
+            h1{
+                font-size: 68px;
+            }
+            width: 100%;
+            height: 200px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 120px ;
+            background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+        .right{
+            text-align: end;
+        }
+            h1{
+                flex: 6;
+            }
+            .right{
+                flex: 2;
+            }
+        }
+    }
+  
+    .flexCont{
+        display: flex;
+        justify-content: space-between;
+        .flex{
+            margin: 40px 30px 3px 30px;
+            h3{
+                margin: 30px 0px;
+                font-size: 28px;
+            }
+        }
+    }
+  }
+  footer{
+    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: "Karla", sans-serif;
+   
+    padding: 50px 0px;
+    hr{
+        border: solid 1px $DarkGrayishViolet;
+        width: 100%;
+    }
+    .footTop{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        .social{
+            letter-spacing: 15px;
+        }
+    }
+    .link{
+        display: flex;
+        justify-content: space-between;
+        .cont{
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 2em;
+            margin-right: 100px;
+            letter-spacing: 2px;
+            .list{
+                margin: 20px auto;
+                color: $GrayishBlue;
+            }
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $DarkViolet;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+  }
+
+@media screen and (max-width:375px) {
+    * {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0;
+    }
+    
+    
+    header{
+        nav{
+            display: none;
+        }
+        .front{
+            #desk{
+                display: none;
+            }
+            #leftDesk {
+                display: none;
+            }
+            #mobile{
+                display: none;
+            }
+        }
+    }
+    main{
+        margin: 0;
+        padding: 0;
+        .bottom{
+           display: block;
+        }
+    }
+} 
