@@ -31,14 +31,14 @@ header {
 header nav {
   background-color: hsl(0deg, 0%, 98%);
 }
-header nav .list ul li a {
+header nav .listt ul li a {
   color: hsl(216deg, 30%, 68%);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
 }
-header nav .list ul li a:hover {
+header nav .listt ul li a:hover {
   color: hsl(256deg, 26%, 20%);
 }
 header .front {
@@ -113,10 +113,10 @@ h3 {
   header nav .burger {
     display: none;
   }
-  header nav .list ul {
+  header nav .listt ul {
     list-style: none;
   }
-  header nav .list ul li {
+  header nav .listt ul li {
     display: inline-block;
     margin-left: 10px;
   }
@@ -151,6 +151,9 @@ h3 {
     bottom: 200px;
   }
   header .front #leftMob {
+    display: none;
+  }
+  header .front .mobi {
     display: none;
   }
   header .front .mob {
@@ -257,8 +260,22 @@ h3 {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    z-index: 999999;
   }
-  header nav .list {
+  header nav .listt {
+    display: none;
+  }
+  header nav .showNav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51, 51, 51, 0.7);
+    z-index: 10;
+  }
+  header .front .deskt {
     display: none;
   }
   header .front img {
