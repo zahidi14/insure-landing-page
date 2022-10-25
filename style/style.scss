@@ -86,6 +86,7 @@ main {
 footer{
     display: block;
     background-color: $VeryLightGray;
+    font-family: "Karla", sans-serif;
    .list{
     color: $font;
    }
@@ -100,7 +101,10 @@ footer{
     color: white;
     text-align: center;
 }
-
+h3{
+    margin: 30px 0px;
+    font-size: 28px;
+}
 
 @media screen and (min-width: 376px) {
     h1 {
@@ -126,6 +130,9 @@ footer{
             display: flex;
             justify-content: space-between;
             padding: 30px 120px;
+            .burger{
+                display: none;
+            }
             .list ul {
                 list-style: none;
                 li{
@@ -179,6 +186,9 @@ footer{
     main{
         margin-top: -120px;
         margin-bottom: 100px;
+        .mobile{
+            display: none;
+        }
         .bottom{
             h1{
                 font-size: 68px;
@@ -216,7 +226,7 @@ footer{
             }
         }
     }
-  }
+  
   footer{
     background-image: url(../images/bg-pattern-footer-desktop.svg);
     background-repeat: no-repeat;
@@ -261,7 +271,7 @@ footer{
         }
     }
   }
-
+}
 @media screen and (max-width:375px) {
     * {
         font-size: 16px;
@@ -274,9 +284,40 @@ footer{
     
     header{
         nav{
-            display: none;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            .list{
+                display: none;
+            }
         }
         .front{
+            img{
+                max-width: 100%;
+            height: auto;
+            }
+            .jumbot{
+                background-image: url(../images/bg-pattern-intro-left-mobile.svg);
+                background-repeat: no-repeat;
+                padding: 80px 30px;
+                text-align: center;
+                font-weight: 100;
+                
+                h1{
+                    font-size: 42px;
+                    font-weight: 100;
+                    line-height: 1em;
+                }
+                p{
+                    margin-top: 20px;
+                    line-height: 1.5em;
+                    margin-bottom: 20px;
+                    font-family: "Karla", sans-serif;
+                    font-weight: 100;
+                }
+            }
             #desk{
                 display: none;
             }
@@ -286,13 +327,111 @@ footer{
             #mobile{
                 display: none;
             }
+            #leftMob{
+                display: none;
+            }
         }
     }
+
     main{
         margin: 0;
         padding: 0;
-        .bottom{
-           display: block;
+        display: block;
+       .desk{
+        display: none;
+       }
+       .mobile{
+        float: right;
+        margin-top: -90%;
+        
+       }
+       .container{
+        text-align: center;
+        margin-top: 170px;
+        padding: 0 20px;
+        hr{
+            
+            border: solid .5px $GrayishBlue;
+            width: 50%;
+            margin:50px auto;
+
         }
+        h1{
+            font-size: 48px;
+            font-family: "DM Serif Display", serif;
+            font-weight: 100;
+            line-height: 50px
+            
+        }
+        .flexCont{
+            margin: 20px;
+            
+            .flex{
+               padding: 15px;
+                h3{
+                    font-family: "DM Serif Display", serif;
+                    font-weight: 100;
+                }
+                p{
+                    line-height: 2em;
+                }
+            }
+        }
+       }
+        .bottom{
+            background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+            margin: 100px 0;
+           display: block;
+           padding: 50px 20px;
+           h1{
+            font-size: 42px;
+            margin-bottom: 30px;
+           }
+        }
+    }
+    footer{
+        background-image: url(../images/bg-pattern-footer-mobile.svg);
+        background-repeat: no-repeat;
+        padding:90px 50px;
+        text-align: center;
+        display: block;
+        .footTop{
+            line-height: 3em;
+            .social{
+                letter-spacing: 15px;
+            }
+        }
+        hr{
+            border: .5px solid $GrayishBlue;
+        }
+       .link{
+        .cont{
+            
+            margin: 30px;
+            
+            font-family: "Karla", sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            .list{
+                font-size: 14px;
+                margin-bottom: 20px;    
+            }
+            ul{
+                list-style: none;
+                line-height: 1.5em;
+                
+                li{
+                    
+                    a{
+                        text-decoration: none;
+                        font-size: 12px;
+                        color: $VeryDarkViolethsl;
+                    }
+                }
+            }
+        }
+       }
     }
 } 

@@ -70,6 +70,7 @@ main .bottom {
 footer {
   display: block;
   background-color: hsl(0deg, 0%, 98%);
+  font-family: "Karla", sans-serif;
 }
 footer .list {
   color: hsl(276deg, 4.55%, 56.86%);
@@ -81,6 +82,11 @@ footer .list {
   width: 100%;
   color: white;
   text-align: center;
+}
+
+h3 {
+  margin: 30px 0px;
+  font-size: 28px;
 }
 
 @media screen and (min-width: 376px) {
@@ -103,6 +109,9 @@ footer .list {
     display: flex;
     justify-content: space-between;
     padding: 30px 120px;
+  }
+  header nav .burger {
+    display: none;
   }
   header nav .list ul {
     list-style: none;
@@ -154,6 +163,9 @@ footer .list {
     margin-top: -120px;
     margin-bottom: 100px;
   }
+  main .mobile {
+    display: none;
+  }
   main .bottom {
     width: 100%;
     height: 200px;
@@ -189,49 +201,48 @@ footer .list {
     margin: 30px 0px;
     font-size: 28px;
   }
+  footer {
+    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: "Karla", sans-serif;
+    padding: 50px 0px;
+  }
+  footer hr {
+    border: solid 1px hsl(273deg, 4%, 51%);
+    width: 100%;
+  }
+  footer .footTop {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  footer .footTop .social {
+    letter-spacing: 15px;
+  }
+  footer .link {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .link .cont {
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 2em;
+    margin-right: 100px;
+    letter-spacing: 2px;
+  }
+  footer .link .cont .list {
+    margin: 20px auto;
+    color: hsl(216deg, 30%, 68%);
+  }
+  footer .link .cont ul {
+    list-style: none;
+  }
+  footer .link .cont ul li a {
+    text-decoration: none;
+    color: hsl(256deg, 26%, 20%);
+    font-size: 14px;
+  }
 }
-footer {
-  background-image: url(../images/bg-pattern-footer-desktop.svg);
-  background-repeat: no-repeat;
-  font-family: "Karla", sans-serif;
-  padding: 50px 0px;
-}
-footer hr {
-  border: solid 1px hsl(273deg, 4%, 51%);
-  width: 100%;
-}
-footer .footTop {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-footer .footTop .social {
-  letter-spacing: 15px;
-}
-footer .link {
-  display: flex;
-  justify-content: space-between;
-}
-footer .link .cont {
-  text-transform: uppercase;
-  font-weight: 800;
-  line-height: 2em;
-  margin-right: 100px;
-  letter-spacing: 2px;
-}
-footer .link .cont .list {
-  margin: 20px auto;
-  color: hsl(216deg, 30%, 68%);
-}
-footer .link .cont ul {
-  list-style: none;
-}
-footer .link .cont ul li a {
-  text-decoration: none;
-  color: hsl(256deg, 26%, 20%);
-  font-size: 14px;
-}
-
 @media screen and (max-width: 375px) {
   * {
     font-size: 16px;
@@ -241,7 +252,37 @@ footer .link .cont ul li a {
     border: 0;
   }
   header nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  header nav .list {
     display: none;
+  }
+  header .front img {
+    max-width: 100%;
+    height: auto;
+  }
+  header .front .jumbot {
+    background-image: url(../images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    padding: 80px 30px;
+    text-align: center;
+    font-weight: 100;
+  }
+  header .front .jumbot h1 {
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 1em;
+  }
+  header .front .jumbot p {
+    margin-top: 20px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    font-family: "Karla", sans-serif;
+    font-weight: 100;
   }
   header .front #desk {
     display: none;
@@ -252,11 +293,95 @@ footer .link .cont ul li a {
   header .front #mobile {
     display: none;
   }
+  header .front #leftMob {
+    display: none;
+  }
   main {
     margin: 0;
     padding: 0;
+    display: block;
+  }
+  main .desk {
+    display: none;
+  }
+  main .mobile {
+    float: right;
+    margin-top: -90%;
+  }
+  main .container {
+    text-align: center;
+    margin-top: 170px;
+    padding: 0 20px;
+  }
+  main .container hr {
+    border: solid 0.5px hsl(216deg, 30%, 68%);
+    width: 50%;
+    margin: 50px auto;
+  }
+  main .container h1 {
+    font-size: 48px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    line-height: 50px;
+  }
+  main .container .flexCont {
+    margin: 20px;
+  }
+  main .container .flexCont .flex {
+    padding: 15px;
+  }
+  main .container .flexCont .flex h3 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+  }
+  main .container .flexCont .flex p {
+    line-height: 2em;
   }
   main .bottom {
+    background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 100px 0;
     display: block;
+    padding: 50px 20px;
+  }
+  main .bottom h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  footer {
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    padding: 90px 50px;
+    text-align: center;
+    display: block;
+  }
+  footer .footTop {
+    line-height: 3em;
+  }
+  footer .footTop .social {
+    letter-spacing: 15px;
+  }
+  footer hr {
+    border: 0.5px solid hsl(216deg, 30%, 68%);
+  }
+  footer .link .cont {
+    margin: 30px;
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  footer .link .cont .list {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  footer .link .cont ul {
+    list-style: none;
+    line-height: 1.5em;
+  }
+  footer .link .cont ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    color: hsl(270deg, 9%, 17%);
   }
 }/*# sourceMappingURL=style.css.map */
